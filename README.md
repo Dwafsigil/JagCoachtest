@@ -4,7 +4,7 @@
 
 ### 1️⃣ Clone the repository:
 ```sh
-git clone https://github.com/baophucnguyen761/JagCoachtest.git
+git clone https://github.com/your-username/JagCoachtest.git
 cd JagCoachtest
 ```
 
