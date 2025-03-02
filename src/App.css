@@ -1,0 +1,121 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+/* Full-Screen Container */
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px; /* Reduced padding to move content up */
+}
+
+/* Move Title Up */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 5px; /* Reduce space below title */
+    margin-top: 10px; /* Move up */
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0; /* Reduced margin */
+}
+
+.logo {
+    width: 250px; /* Slightly smaller */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    gap: 50px;
+    align-items: stretch;
+    position: relative;
+}
+
+/* Video & Transcript Section Styling */
+.video-section, .transcript-section {
+    flex: 1;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    min-height: 100%;
+}
+
+/* File Input */
+input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Video Styling */
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Button Styling */
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ffb700;
+}
+
+/* Transcript Box */
+#transcript {
+    margin-top: 30px; /* Reduced margin */
+    padding: 20px;
+    background: whitesmoke;
+    border-radius: 5px;
+    min-height: 250px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid black;
+}
