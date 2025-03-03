@@ -1,0 +1,16 @@
+.main-container {
+    background-color: white; 
+    height: 100vh; 
+    font-size: 28px;
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-logo {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
