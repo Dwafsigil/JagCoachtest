@@ -50,7 +50,7 @@ function App() {
             <div className="container">
                 <div className="main-content">
                     <div className="video-section">
-                        <h2>Upload your video</h2>
+                        <h1>Upload your video</h1>
                         <input type="file" accept="video/*" onChange={handleFileChange} />
                         {videoFile && (
                             <video controls>
@@ -61,7 +61,7 @@ function App() {
                         <button onClick={handleAnalyze}>Analyze Video</button>
                     </div>
                     <div className="transcript-section">
-                        <h2>Analyze - AI Transcript</h2>
+                        <h1>Analyze - AI Transcript</h1>
                         <div id="transcript">{transcript}</div>
                     </div>
                 </div>
