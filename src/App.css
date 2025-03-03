@@ -11,6 +11,59 @@ body {
     flex-direction: column;
 }
 
+.navbar {
+    width: 100%;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Flex container for aligning logo and links */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Left-aligned JagCoach logo */
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Navigation links positioned next to the logo */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ffcc00;
+}
+
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -19,14 +72,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px; 
-}
-
-h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 5px; 
-    margin-top: 10px; 
+    padding: 10px;
+    margin-top: 100px;
 }
 
 
@@ -35,15 +82,20 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
 .logo {
-    width: 250px; 
+    width: 250px;
     display: block;
     margin: 0 auto;
 }
 
+.nav-logo {
+    width: 0px; /* Adjust as needed */
+    height: auto;
+    max-height: 40px; /* Prevents it from scaling too large */
+}
 
 .main-content {
     display: flex;
@@ -54,8 +106,8 @@ h1 {
     gap: 50px;
     align-items: stretch;
     position: relative;
+    margin-top: 100px;
 }
-
 
 .video-section, .transcript-section {
     flex: 1;
@@ -71,11 +123,9 @@ h1 {
     min-height: 100%;
 }
 
-
 input[type="file"] {
     margin: 10px 0;
 }
-
 
 video {
     width: 100%;
@@ -103,7 +153,7 @@ button:hover {
 }
 
 #transcript {
-    margin-top: 30px; 
+    margin-top: 30px;
     padding: 20px;
     background: whitesmoke;
     border-radius: 5px;
