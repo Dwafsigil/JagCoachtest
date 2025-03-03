@@ -1,15 +1,15 @@
 import React from "react";
 import "./Feedback.css";
 
-function Feedback() {
-    return (
-        <div className="container">
-            <div className="feedback-content">
-                <h2>Feedback Page</h2>
-                <p>Provide your feedback here.</p>
-            </div>
-        </div>
-    );
-}
+const Feedback = () => {
+  return (
+    <div className="feedback-container">
+      <div className="feedback-section">
+        <h1>Feedback Page</h1>
+        <p> Feedback will be here</p>
+      </div>
+    </div>
+  );
+};
 
 export default Feedback;

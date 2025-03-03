@@ -1,10 +1,10 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom"; // ✅ Only use Routes here
+import { Routes, Route } from "react-router-dom"; 
 import NavBar from "./components/NavBar/NavBar";
 import Upload from "./components/Upload/Upload";
 import Feedback from "./components/Feedback/Feedback";
 import Resources from "./components/Resource/Resource";
-import Main from "./components/mainpage/main"; // ✅ Ensure correct import
+import Main from "./components/mainpage/main"; 
 import "./App.css";
 
 function App() {
