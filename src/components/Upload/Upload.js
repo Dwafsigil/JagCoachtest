@@ -36,7 +36,7 @@ function Upload() {
         <div className="container">
             <div className="upload-content">
                 <div className="video-section">
-                    <h2>Upload your video</h2>
+                    <h1>Upload your video</h1>
                     <input type="file" accept="video/*" onChange={handleFileChange} />
                     {videoFile && (
                         <video controls>
@@ -48,7 +48,7 @@ function Upload() {
                 </div>
 
                 <div className="transcript-section">
-                    <h2>Analyze - AI Transcript</h2>
+                    <h1>Analyze - AI Transcript</h1>
                     <div id="transcript">{transcript}</div>
                 </div>
             </div>
