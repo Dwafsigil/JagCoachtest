@@ -17,9 +17,10 @@
 #transcript {
     width: 100%;
     max-width: 400px;
-    height: 250px; 
+    height: 200px; 
     text-align: left;
     padding: 20px;
+    margin-bottom: 90px;
     background: whitesmoke;
     border-radius: 5px;
     border: 1px solid black;

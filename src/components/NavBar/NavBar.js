@@ -10,7 +10,8 @@ function NavBar() {
                 <li><Link to="/">Home</Link></li>  
                 <li><Link to="/upload">Upload</Link></li>  
                 <li><Link to="/feedback">Feedback</Link></li>  
-                <li><Link to="/resources">Resources</Link></li>  
+                <li><Link to="/library">Library</Link></li>  
+                <li><Link to="/aboutus">About Us</Link></li>  
             </ul>
         </nav>
     );
