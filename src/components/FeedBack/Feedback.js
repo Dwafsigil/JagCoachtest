@@ -38,9 +38,9 @@ const Feedback = () => {
                         className="ai-feedback-text"
                         dangerouslySetInnerHTML={{ 
                             __html: analysis.ai_feedback
-                                .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")  // Convert **bold** to <strong>
-                                .replace(/(?:\r\n|\r|\n)/g, "<br><br>")           // Ensure each section starts on a new line
-                                .replace(/- /g, "<br>• ")                          // Convert dashes to bullet points properly
+                                .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")  
+                                .replace(/(?:\r\n|\r|\n)/g, "<br><br>")           
+                                .replace(/- /g, "<br>• ")                          
                         }} 
                     />
                 </div>
