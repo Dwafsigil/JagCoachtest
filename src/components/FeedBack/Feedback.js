@@ -1,27 +1,50 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import "./Feedback.css";
 
 const Feedback = () => {
-    const feedbacks = [
-        { id: 1, category: "Clarity", comment: "Your speech was clear and well-paced." },
-        { id: 2, category: "Engagement", comment: "Good eye contact and enthusiasm in your tone." },
-        { id: 3, category: "Content", comment: "Your points were well-structured and easy to follow." },
-        { id: 4, category: "Pronunciation", comment: "Some words were mispronounced; try slowing down slightly." },
-        { id: 5, category: "Confidence", comment: "You appeared confident, but avoid too many filler words." },
-        { id: 6, category: "Pacing", comment: "The pacing was good, but some parts felt rushed." },
-    ];
+    const location = useLocation();
+    const { transcript, analysis } = location.state || {};
 
     return (
-        <div className="analysis-container">
-            <h1>JagCoach Feedback</h1>
-            <p>Here is an analysis of your oral presentation:</p>
-            <div className="analysis-list">
-                {feedbacks.map((feedback) => (
-                    <div key={feedback.id} className="analysis-item">
-                        <strong>{feedback.category}:</strong> {feedback.comment}
-                    </div>
-                ))}
-            </div>
+        <div className="feedback-container">
+            <h1 className="feedback-title">JagCoach Feedback</h1>
+            <p className="feedback-subtitle">Here is an analysis of your oral presentation:</p>
+
+            {/* Speech Transcript Box */}
+            {transcript && (
+                <div className="feedback-box">
+                    <h2>Speech Transcript</h2>
+                    <p className="transcript-text">{transcript}</p>
+                </div>
+            )}
+
+            {/* Speech Analysis Box */}
+            {analysis && (
+                <div className="feedback-box">
+                    <h2>Speech Analysis</h2>
+                    <p><strong>Speech Rate:</strong> {analysis.speech_rate_wps} words/sec</p>
+                    <p><strong>Number of Pauses:</strong> {analysis.num_pauses}</p>
+                    <p><strong>Total Silence:</strong> {analysis.total_silence_sec} sec</p>
+                    <p><strong>Average Pitch:</strong> {analysis.average_pitch} Hz</p>
+                </div>
+            )}
+
+            {/* AI Feedback Box */}
+            {analysis?.ai_feedback && (
+                <div className="feedback-box ai-feedback">
+                    <h2>AI Feedback</h2>
+                    <div 
+                        className="ai-feedback-text"
+                        dangerouslySetInnerHTML={{ 
+                            __html: analysis.ai_feedback
+                                .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")  // Convert **bold** to <strong>
+                                .replace(/(?:\r\n|\r|\n)/g, "<br><br>")           // Ensure each section starts on a new line
+                                .replace(/- /g, "<br>• ")                          // Convert dashes to bullet points properly
+                        }} 
+                    />
+                </div>
+            )}
         </div>
     );
 };
