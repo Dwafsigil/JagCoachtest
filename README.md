@@ -7,7 +7,7 @@ Clone the repository
 
 git clone https://github.com/Dwafsigil/JagCoachTest.git
 
-#Frontend 
+# Frontend 
 
 1. cd src/frontend
 2. npm install
